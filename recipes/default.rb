@@ -18,21 +18,6 @@ end
 
 package "fossology"
 
-# Remove apache2 site stuff installed by package
+# Install and configure apache2
 
-["/etc/apache2/sites-enabled/fossology.conf",
- "/etc/apache2/sites-available/fossology.conf"].each do |f|
-  file f do
-    action :delete
-  end
-end
-
-# Install and configure apache
-
-include_recipe "apache2"
-
-web_app "chef-fossology" do
-  server_name "fossology.mon.hpcloud.net"
-  server_aliases ["fossology.mon.hpcloud.net"]
-  docroot "/usr/share/fossology/www/ui"
-end
+include_recipe "fossology::apache2"
