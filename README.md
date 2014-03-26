@@ -48,4 +48,4 @@ Include `fossology` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Tim Potter <tpot@hp.com>
