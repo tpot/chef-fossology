@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+require "etc"
+
 # Install and configure agent-only node
 
 include_recipe "fossology::apt"
@@ -20,3 +22,14 @@ agent_packages.each do |p|
 end
 
 include_recipe "fossology::config"
+include_recipe "nfs"
+
+fossy_uid = Etc.getpwnam("fossy").uid
+fossy_gid = Etc.getgrnam("fossy").gid
+
+mount "/srv/fossology/repository" do
+  fstype "nfs"
+  device "10.0.0.35:/srv/fossology/repository"
+  options ["ro"]
+  action [:mount, :enable]
+end
