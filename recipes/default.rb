@@ -6,3 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+apt_repository "fossology" do
+  uri "http://www.fossology.org/releases/2.4.0/Ubuntu/"
+  distribution "12.04"
+  components ["contrib"]
+  trusted true
+end
+
+package "fossology"
