@@ -8,3 +8,6 @@ version          '0.1.0'
 
 depends "apt"
 depends "apache2"
+
+recipe "fossology::server", "Install a FOSSology server"
+recipe "fossology::agent", "Install a FOSSology agent"
