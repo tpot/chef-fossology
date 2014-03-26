@@ -7,10 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install fossology
+# Install and configure fossology server node
 
 include_recipe "fossology::apt"
 package "fossology"
+
+include_recipe "fossology::config"
 
 # Install and configure apache2
 

@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install agent-only software
+# Install and configure agent-only node
 
 include_recipe "fossology::apt"
 
@@ -19,3 +19,4 @@ agent_packages.each do |p|
   package p
 end
 
+include_recipe "fossology::config"
