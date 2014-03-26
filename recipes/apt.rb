@@ -7,11 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Install fossology
+apt_repository "fossology" do
+  uri "http://www.fossology.org/releases/2.4.0/Ubuntu/"
+  distribution "12.04"
+  components ["contrib"]
+  trusted true
+end
 
-include_recipe "fossology:apt"
-package "fossology"
-
-# Install and configure apache2
-
-include_recipe "fossology::apache2"
