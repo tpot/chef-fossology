@@ -33,6 +33,6 @@ end
 
 nfs_export "/srv/fossology/repository" do
   network "*"
-  options ["all_squash", "fsid=0", "anonuid=#{fossy_uid}", "anongid=#{fossy_gid}", "insecure", "ro"]
-  writeable false
+  options ["all_squash", "fsid=0", "anonuid=#{fossy_uid}", "anongid=#{fossy_gid}", "insecure"]
+  writeable true
 end

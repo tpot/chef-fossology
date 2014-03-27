@@ -34,6 +34,6 @@ end
 mount "/srv/fossology/repository" do
   fstype "nfs"
   device "10.0.0.35:/srv/fossology/repository"
-  options ["ro"]
+  options ["rw"]
   action [:mount, :enable]
 end
