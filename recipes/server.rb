@@ -24,8 +24,12 @@ include_recipe "fossology::apache2"
 
 include_recipe "nfs::server"
 
-fossy_uid = Etc.getpwnam("fossy").uid
-fossy_gid = Etc.getgrnam("fossy").gid
+ruby_block "fossy_get_ids" do
+  block do
+    fossy_uid = Etc.getpwnam("fossy").uid
+    fossy_gid = Etc.getgrnam("fossy").gid
+  end
+end
 
 nfs_export "/srv/fossology/repository" do
   network "*"

@@ -24,8 +24,12 @@ end
 include_recipe "fossology::config"
 include_recipe "nfs"
 
-fossy_uid = Etc.getpwnam("fossy").uid
-fossy_gid = Etc.getgrnam("fossy").gid
+ruby_block "fossy_get_ids" do
+  block do
+    fossy_uid = Etc.getpwnam("fossy").uid
+    fossy_gid = Etc.getgrnam("fossy").gid
+  end
+end
 
 mount "/srv/fossology/repository" do
   fstype "nfs"
