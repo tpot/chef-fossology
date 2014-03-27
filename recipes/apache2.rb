@@ -26,4 +26,5 @@ web_app "chef-fossology" do
   server_name "fossology.mon.hpcloud.net"
   server_aliases ["fossology.mon.hpcloud.net"]
   docroot "/usr/share/fossology/www/ui"
+  cookbook "apache2"
 end
