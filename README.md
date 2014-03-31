@@ -37,6 +37,18 @@ The following attributes are supported by the cookbook:
     <td>Attributes of server node</td>
     <td><tt>{"name" => "localhost, "max_jobs" => 10}</tt></td>
   </tr>
+  <tr>
+    <td><tt>['fossology']['ssh_public_key']</tt></td>
+    <td>String</td>
+    <td>Public key for FOSSology user</td>
+    <td><tt>nil</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['fossology']['ssh_private_key']</tt></td>
+    <td>String</td>
+    <td>Private key for FOSSology user</td>
+    <td><tt>nil</tt></td>
+  </tr>
 </table>
 
 ## Data bags
