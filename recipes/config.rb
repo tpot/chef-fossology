@@ -36,17 +36,18 @@ directory "#{home}/.ssh" do
   action :create
 end
 
-template "#{home}/.ssh/authorized_keys" do
+file "#{home}/.ssh/authorized_keys" do
   content "#{node["fossology"]["ssh_public_key"]}\n"
   mode 0644
 end
 
-template "#{home}/.ssh/id_rsa.pub" do
+file "#{home}/.ssh/id_rsa.pub" do
   content "#{node["fossology"]["ssh_public_key"]}\n"
   mode 0644
 end
 
-template "#{home}/.ssh/id_rsa" do
+file "#{home}/.ssh/id_rsa" do
   content "#{node["fossology"]["ssh_private_key"]}\n"
   mode 0400
+  backup false
 end
