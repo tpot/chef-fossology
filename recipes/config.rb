@@ -36,21 +36,29 @@ end
 home = "/home/fossy"
 
 directory "#{home}/.ssh" do
+  owner "fossy"
+  group "fossy"
   action :create
 end
 
 file "#{home}/.ssh/authorized_keys" do
   content "#{node["fossology"]["ssh_public_key"]}\n"
+  owner "fossy"
+  group "fossy"
   mode 0644
 end
 
 file "#{home}/.ssh/id_rsa.pub" do
   content "#{node["fossology"]["ssh_public_key"]}\n"
+  owner "fossy"
+  group "fossy"
   mode 0644
 end
 
 file "#{home}/.ssh/id_rsa" do
   content "#{node["fossology"]["ssh_private_key"]}\n"
+  owner "fossy"
+  group "fossy"
   mode 0400
   backup false
 end
