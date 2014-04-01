@@ -8,8 +8,8 @@
 #
 
 apt_repository "fossology" do
-  uri "http://www.fossology.org/releases/2.4.0/Ubuntu/"
-  distribution "12.04"
+  uri "http://www.fossology.org/releases/#{node["fossology"]["version"]}/Ubuntu/"
+  distribution node["platform_version"]
   components ["contrib"]
   trusted true
 end

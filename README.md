@@ -32,6 +32,12 @@ The following attributes are supported by the cookbook:
     <th>Default</th>
   </tr>
   <tr>
+    <td><tt>['fossology']['version']</tt></td>
+    <td>String</td>
+    <td>FOSSology release to install</td>
+    <td><tt>2.4.0</tt></td>
+  </tr>
+  <tr>
     <td><tt>['fossology']['server']</tt></td>
     <td>Hash</td>
     <td>Attributes of server node</td>
