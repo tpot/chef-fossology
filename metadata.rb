@@ -12,6 +12,7 @@ depends "apt"
 depends "apache2"
 depends "nfs"
 depends "postgresql"
+depends "openssh"
 
 recipe "fossology::server", "Install a FOSSology server"
 recipe "fossology::agent", "Install a FOSSology agent"

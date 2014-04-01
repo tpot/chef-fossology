@@ -13,6 +13,10 @@ require "etc"
 
 include_recipe "postgresql::server"
 
+# Install and configure OpenSSH
+
+include_recipe "openssh"
+
 # Install and configure fossology server node
 
 include_recipe "fossology::apt"
