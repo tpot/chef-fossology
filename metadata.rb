@@ -11,6 +11,7 @@ supports "ubuntu", ">= 12.04"
 depends "apt"
 depends "apache2"
 depends "nfs"
+depends "postgresql"
 
 recipe "fossology::server", "Install a FOSSology server"
 recipe "fossology::agent", "Install a FOSSology agent"

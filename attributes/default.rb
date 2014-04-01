@@ -13,3 +13,8 @@ default["fossology"]["server"] = {
 
 default["fossology"]["ssh_public_key"] = nil
 default["fossology"]["ssh_private_key"] = nil
+
+# PostgreSQL tuning
+
+default["postgresql"]["config"]["listen_addresses"] = "*"
+

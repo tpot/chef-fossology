@@ -9,6 +9,10 @@
 
 require "etc"
 
+# Install and configure PostgreSQL
+
+include_recipe "postgresql::server"
+
 # Install and configure fossology server node
 
 include_recipe "fossology::apt"
