@@ -26,7 +26,7 @@ include_recipe "nfs"
 
 mount "/srv/fossology/repository" do
   fstype "nfs"
-  device "10.0.0.35:/srv/fossology/repository"
+  device "#{node["fossology"]["server"]["name"]}:/srv/fossology/repository"
   options ["rw"]
   action [:mount, :enable]
 end
