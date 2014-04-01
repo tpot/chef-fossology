@@ -40,7 +40,6 @@ include_recipe "nfs::server"
 
 nfs_export "/srv/fossology/repository" do
   network "*"
-  options ["all_squash", "fsid=0", "anonuid=#{Etc.getpwnam("fossy").uid}", 
-           "anongid=#{Etc.getgrnam("fossy").gid}", "insecure"]
+  options ["no_root_squash", "fsid=0", "insecure"]
   writeable true
 end
