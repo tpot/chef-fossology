@@ -20,6 +20,9 @@ template "/etc/fossology/fossology.conf" do
   source "fossology.conf.erb"
   mode 0644
   variables(:server => node["fossology"]["server"], :hosts => hosts_list)
+  if node.recipes.include?("fossology::server")
+    notifies :restart, "service[fossology]"
+  end
 end
 
 template "/etc/fossology/Db.conf" do

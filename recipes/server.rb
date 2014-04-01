@@ -12,7 +12,13 @@ require "etc"
 # Install and configure fossology server node
 
 include_recipe "fossology::apt"
+
 package "fossology"
+
+service "fossology" do
+  action [:enable, :start]
+  supports :status => false, :restart => true
+end
 
 include_recipe "fossology::config"
 
