@@ -9,6 +9,10 @@
 
 require "etc"
 
+# Create users and ssh keys
+
+include_recipe "user::data_bag"
+
 # Install and configure PostgreSQL
 
 include_recipe "postgresql::server"
