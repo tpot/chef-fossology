@@ -1,6 +1,7 @@
 # Version attributes
 
 default["fossology"]["version"] = "2.4.0"
+default["fossology"]["server_name"] = "localhost"
 
 # Define attributes for the server node
 

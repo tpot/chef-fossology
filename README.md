@@ -38,6 +38,12 @@ The following attributes are supported by the cookbook:
     <td><tt>2.4.0</tt></td>
   </tr>
   <tr>
+    <td><tt>['fossology']['server_name']</tt></td>
+    <td>String</td>
+    <td>Virtual host name used for the web interface</td>
+    <td><tt>localhost</tt></td>
+  </tr>
+  <tr>
     <td><tt>['fossology']['server']</tt></td>
     <td>Hash</td>
     <td>Attributes of server node</td>

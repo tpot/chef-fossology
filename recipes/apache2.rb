@@ -23,8 +23,8 @@ end
 include_recipe "apache2"
 
 web_app "chef-fossology" do
-  server_name "fossology.mon.hpcloud.net"
-  server_aliases ["fossology.mon.hpcloud.net"]
+  server_name node["fossology"]["server_name"]
+  server_aliases [node["fossology"]["server_name"]]
   docroot "/usr/share/fossology/www/ui"
   cookbook "apache2"
 end
