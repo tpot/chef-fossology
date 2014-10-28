@@ -2,9 +2,10 @@
 
 This cookbook installs and configures the
 [FOSSology](http://fossology.org) open source analysis tool.
-FOSSology describes its mission
 
->  ... to build a community to facilitate the study of Free and Open Source
+FOSSology describes its mission as to
+
+>  ... build a community to facilitate the study of Free and Open Source
 >  Software by providing free and open source data analysis tools.
 
 Single-server and multi-node configurations are supported by this cookbook.
@@ -18,7 +19,7 @@ FOSSology itself supports the following distributions:
 * Ubuntu
 * Fedora
 
-However the cookbook only supports the Ubuntu distribution at this time.
+However the cookbook only supports Ubuntu at this time.
 
 ## Attributes
 
@@ -65,7 +66,7 @@ The following attributes are supported by the cookbook:
 
 ## Data bags
 
-### `fossology_hosts`
+### fossology_hosts
 
 This data bag defines the attributes of agent nodes, or "hosts" in the
 parlance of FOSSology configuration.  Each data bag entry declares the
